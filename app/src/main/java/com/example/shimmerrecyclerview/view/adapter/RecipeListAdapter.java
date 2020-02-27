@@ -1,4 +1,4 @@
-package com.example.shimmerrecyclerview;
+package com.example.shimmerrecyclerview.view.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,6 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.example.shimmerrecyclerview.R;
+import com.example.shimmerrecyclerview.model.ShimmerResponce;
+
 import java.util.List;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -50,8 +54,13 @@ public class RecipeListAdapter  extends RecyclerView.Adapter<RecipeListAdapter.M
         holder.price.setText("Price: ₹" + shimmerResponce.getPrice());
         holder.timestamp.setText(shimmerResponce.getTimestamp());
 
-        Glide.with(context)
-                .load(shimmerResponce.getThumbnail()).into(holder.thumbnail);
+        RequestOptions options = new RequestOptions()
+                .centerCrop()
+                .placeholder(R.mipmap.ic_launcher_round)
+                .error(R.mipmap.ic_launcher_round);
+        Glide.with(context).load(shimmerResponce.getThumbnail()).apply(options).into(holder.thumbnail);
+
+       // Glide.with(context).load(shimmerResponce.getThumbnail()).into(holder.thumbnail);
     }
 
     @Override

@@ -1,4 +1,4 @@
-package com.example.shimmerrecyclerview;
+package com.example.shimmerrecyclerview.other;
 
 public class Serilalization {
 

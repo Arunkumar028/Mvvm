@@ -1,4 +1,4 @@
-package com.example.shimmerrecyclerview;
+package com.example.shimmerrecyclerview.service;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

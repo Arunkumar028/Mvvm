@@ -1,4 +1,4 @@
-package com.example.shimmerrecyclerview;
+package com.example.shimmerrecyclerview.other;
 
 import android.os.Parcel;
 import android.os.Parcelable;
